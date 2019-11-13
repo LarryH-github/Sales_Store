@@ -25,7 +25,8 @@ namespace OnboardingTask.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-PS9HAA5;Database=OnboardingTaskDatabase;Trusted_Connection=True;");
+                //optionsBuilder.UseSqlServer("Server=DESKTOP-PS9HAA5;Database=OnboardingTaskDatabase;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=tcp:onboarding-task-server.database.windows.net,1433;Initial Catalog=OnboardingTaskDatabase;Persist Security Info=False;User ID=OnboardingTaskLogin;Password=SecureNugget55;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
