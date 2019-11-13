@@ -31,8 +31,6 @@ export class FetchSales extends React.Component {
         let sales = this.state.sales;
         let tableData = null;
         if (sales != "") {
-            //console.log("sales: " + sales);
-            //console.log("salesify: " + JSON.stringify(sales));
             tableData = sales.map(sale =>
                 <tr key={sale.id}>
                     <td className="three wide">{this.getDataName("customers", sale.customerId)}</td>
